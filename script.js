@@ -24,7 +24,7 @@ var blue_markers = [];
 function initialize() {
     my_map_options = {
         center:  my_center, // to change this value, change my_center above
-        zoom: 7,  // higher is closer-up
+        zoom: 6,  // higher is closer-up
         mapTypeId: google.maps.MapTypeId.HYBRID // you can also use TERRAIN, STREETMAP, SATELLITE
     };
 
@@ -37,21 +37,28 @@ function initialize() {
               map: my_map,
               icon: blueURL, // this sets the image that represents the marker in the map to the one
                              // located at the URL which is given by the variable blueURL, see above
-              title: "first Marker",
-              window_content: "<h1>Marker1</h1><p> and this would be the extended description</p>"
+              title: "FortFrontenac",
+              window_content: "<h1>Fort Frontenac</h1><p> and this would be the extended description</p>"
              },
              {position: new google.maps.LatLng(42.299369, -83.096096),
               map: my_map,
               icon: blueURL, // this sets the image that represents the marker in the map
-              title: "second Marker",
+              title: "FortDetroit",
               window_content: "<h1>Marker2</h1><p> and this would be the extended description</p>"
             },
             {position: new google.maps.LatLng(43.262389, -79.063116),
              map: my_map,
              icon: redURL, // this sets the image that represents the marker in the map
-             title: "third Marker",
-             window_content: "<h1>Marker3</h1><p> and this would be the extended description</p>"
-           }
+             title: "FortNiagara",
+             window_content: "<h1>Fort Niagara</h1><p> and this would be the extended description</p>"
+
+           },
+           {position: new google.maps.LatLng(42.652579, -73.756232),
+            map: my_map,
+            icon: redURL, // this sets the image that represents the marker in the map
+            title: "Albany",
+            window_content: "<h1>Albany</h1><p> and this would be the extended description</p>"
+          }
             ];
 
     for (j = 0; j < all_my_markers.length; j++) {
@@ -64,7 +71,7 @@ function initialize() {
 
         // this next line is ugly, and you should change it to be prettier.
         // be careful not to introduce syntax errors though.
-        legendHTML += "<div class=\"pointer\" onclick=\"locateMarker(my_markers[" + j + "])\"> <h3>" + marker.title + "</h3><div>" + marker.window_content + "</div></div>";
+        legendHTML += "<div class=\"pointer\" onclick=\"locateMarker(my_markers[" + j + "])\"> <div>" + marker.window_content + "</div></div>";
         marker.info = new google.maps.InfoWindow({content: marker.window_content});
         var listener = google.maps.event.addListener(marker, 'click', function() {
             // if you want to allow multiple info windows, uncomment the next line

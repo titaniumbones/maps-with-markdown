@@ -1,6 +1,9 @@
 /* This is a very simple CSS setup that shows the size of the relevant divs and -- important! -- sets the size of the map container */
 
 /* add any styling for the central column here */
+p {
+    text-indent: 50px !important;
+}
 div.container {
 }
 
@@ -64,6 +67,9 @@ div#map_canvas h1 {
 
 }
 
+#map_legend h1 {
+  font-size: 12px;
+}
 div.address  {
 
 }
@@ -71,4 +77,3 @@ div.address  {
 div.description {
 
 }
-
