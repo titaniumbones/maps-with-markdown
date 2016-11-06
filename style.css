@@ -30,7 +30,7 @@ div#map_legend {
 
 /* if you want, you can make the text in the legend less ugly by adding
 extra css classes */
-div#map_legend h1, div#map_legend h3 {
+div#map_legend h3, div#map_legend h4 {
 
 }
 
@@ -51,10 +51,10 @@ button.rounded {
   border: 1px black solid;
 }
 button#hide {
-  background:orange;
+  background:red;
 }
 button#show {
-  background:green;
+  background:lime;
 }
 
 /* use these last three to style the text inside the
@@ -67,7 +67,7 @@ div#map_canvas h1 {
 
 }
 
-#map_legend h1 {
+#map_legend h2 {
   font-size: 12px;
 }
 div.address  {
