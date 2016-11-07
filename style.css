@@ -1,6 +1,9 @@
 /* This is a very simple CSS setup that shows the size of the relevant divs and -- important! -- sets the size of the map container */
 
 /* add any styling for the central column here */
+p {
+    text-indent: 50px !important;
+}
 div.container {
 }
 
@@ -22,13 +25,13 @@ div#map_canvas {
 /* this is the legend div. Can you make it into a right sidebar? you may
 have to add some extra css to the mapcontainer div */
 div#map_legend {
-
+border:10px
 }
 
 /* if you want, you can make the text in the legend less ugly by adding
 extra css classes */
-div#map_legend h1, div#map_legend h3 {
-
+div#map_legend h3, div#map_legend h4 {
+ background-color:E3E3E3 !important;
 }
 
 // make it obvious that the legend text is clickable
@@ -48,10 +51,10 @@ button.rounded {
   border: 1px black solid;
 }
 button#hide {
-  background:orange;
+  background:red;
 }
 button#show {
-  background:green;
+  background:orange;
 }
 
 /* use these last three to style the text inside the
@@ -60,10 +63,13 @@ button#show {
 
 */
 
-div#map_canvas h1 {
+div#map_canvas h1 {font-size:14;
 
 }
 
+#map_legend h2 {
+  font-size: 12px;
+}
 div.address  {
 
 }
@@ -71,4 +77,3 @@ div.address  {
 div.description {
 
 }
-
