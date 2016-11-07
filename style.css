@@ -25,13 +25,13 @@ div#map_canvas {
 /* this is the legend div. Can you make it into a right sidebar? you may
 have to add some extra css to the mapcontainer div */
 div#map_legend {
-
+border:10px
 }
 
 /* if you want, you can make the text in the legend less ugly by adding
 extra css classes */
 div#map_legend h3, div#map_legend h4 {
-
+ background-color:E3E3E3 !important;
 }
 
 // make it obvious that the legend text is clickable
@@ -54,7 +54,7 @@ button#hide {
   background:red;
 }
 button#show {
-  background:lime;
+  background:orange;
 }
 
 /* use these last three to style the text inside the
@@ -63,7 +63,7 @@ button#show {
 
 */
 
-div#map_canvas h1 {
+div#map_canvas h1 {font-size:14;
 
 }
 
