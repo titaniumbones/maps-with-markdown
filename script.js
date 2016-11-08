@@ -11,8 +11,7 @@ var hotspot8 = new google.maps.LatLng(43.621687,-79.475545); // Humber Bay Park 
 var hotspot9 = new google.maps.LatLng(43.586966,-79.543057); // Marie Curtis Park
 var hotspot10 = new google.maps.LatLng(43.631369,-79.326374); // Tommy Thompson Park
 var hotspot11 = new google.maps.LatLng(43.628947,-79.394420); // Toronto Islands
-
-var my_markers = []; // we use this in the main loop below to hold the markers
+var my_markers = [];
 var infowindow = new google.maps.InfoWindow({content: ""});
 var my_first_marker; 
 var my_second_marker; 
@@ -30,88 +29,79 @@ function initialize() {
     my_map_options = {
         center: hotspot1, // show Ashbridges Bay Park first
         zoom: 10,  
-        mapTypeId: google.maps.MapTypeId.HYBRID // Options: TERRAIN, STREETMAP, SATELLITE
+        mapTypeId: google.maps.MapTypeId.HYBRID
     };
    
     my_map = new google.maps.Map(document.getElementById("map_canvas"),
                                  my_map_options);
-
-    /* marker definition begins here! to create a new marker, copy/paste and change values */
-    /* ----------------------------------------------------------------------------------- */
-
-    // This is our first, hand-crafted map marker  
-    // Modify all its attributes to replace it with a new marker
-    // copy and rename it to create a second marker
     my_first_marker = new google.maps.Marker({
         position: hotspot1,
         map: my_map,
         title: "1",
-        window_content:"<h1>Ashbridges Bay Park</h1><p>1561 Lake Shore Blvd E, Toronto, ON M4L 3W6<br>Common fish: Bass, carp, panfish, and trout.</p>"
+        window_content:"<h1><font color=navy>Ashbridges Bay Park</font></h1><p>1561 Lake Shore Blvd E, Toronto, ON M4L 3W6<br>Common fish: Bass, carp, panfish, and trout.</p>"
     }); 
      my_second_marker = new google.maps.Marker({
         position: hotspot2,
         map: my_map,
         title: "2",
-        window_content:"<h1>Bluffer’s Park</h1><p>7 Brimley Rd S, Scarborough, ON M1M 3W3<br>Common fish: Walleye, salmon, and trout.</p>"
+        window_content:"<h1><font color=navy>Bluffer’s Park</font></h1><p>7 Brimley Rd S, Scarborough, ON M1M 3W3<br>Common fish: Walleye, salmon, and trout.</p>"
     }); 
         my_third_marker = new google.maps.Marker({
         position: hotspot3,
         map: my_map,
         title: "3",
-        window_content:"<h1>Centennial Park</h1><p>256 Centennial Park Rd, Etobicoke, ON M9C 5N3<br>Common fish: Carp.</p>"
+        window_content:"<h1><font color=navy>Centennial Park</font></h1><p>256 Centennial Park Rd, Etobicoke, ON M9C 5N3<br>Common fish: Carp.</p>"
     }); 
      my_fourth_marker = new google.maps.Marker({
         position: hotspot4,
         map: my_map,
         title: "4",
-        window_content:"<h1>Colonel Samuel Smith Park</h1><p>3145 Lake Shore Boulevard West, Etobicoke, ON M8V 1L4<br>Common fish: Bass, pike, carp, and panfish.</p>"
+        window_content:"<h1><font color=navy>Colonel Samuel Smith Park</font></h1><p>3145 Lake Shore Boulevard West, Etobicoke, ON M8V 1L4<br>Common fish: Bass, pike, carp, and panfish.</p>"
     }); 
      my_fifth_marker = new google.maps.Marker({
         position: hotspot5,
         map: my_map,
         title: "5",
-        window_content:"<h1>Eglinton Flats</h1><p>3601 Eglinton Ave W, Toronto, ON L5M 7C4<br>Common fish: Pike.</p>"
+        window_content:"<h1><font color=navy>Eglinton Flats</font></h1><p>3601 Eglinton Ave W, Toronto, ON L5M 7C4<br>Common fish: Pike.</p>"
     }); 
        my_sixth_marker = new google.maps.Marker({
         position: hotspot6,
         map: my_map,
         title: "6",
-        window_content:"<h1>G. Ross Lord Park</h1><p>4801 Dufferin St, North York, ON M3H 5T3<br>Common fish: Goldfish, punkinseed, rock bass, brown bullhead, and carp.</p>"
+        window_content:"<h1><font color=navy>G. Ross Lord Park</font></h1><p>4801 Dufferin St, North York, ON M3H 5T3<br>Common fish: Goldfish, punkinseed, rock bass, brown bullhead, and carp.</p>"
     }); 
        my_seventh_marker = new google.maps.Marker({
         position: hotspot7,
         map: my_map,
         title: "7",
-        window_content:"<h1>Grenadier Pond</h1><p>1873 Bloor St W, Toronto, ON M6R 2Z3, Canada<br>Common fish: Carp, bluegill, punkinseed, black crappie, yellow perch, white perch, brown bullhead, and bass.</p>"
+        window_content:"<h1><font color=navy>Grenadier Pond</font></h1><p>1873 Bloor St W, Toronto, ON M6R 2Z3, Canada<br>Common fish: Carp, bluegill, punkinseed, black crappie, yellow perch, white perch, brown bullhead, and bass.</p>"
     }); 
        my_eighth_marker = new google.maps.Marker({
         position: hotspot8,
         map: my_map,
         title: "8",
-        window_content:"<h1>Humber Bay Park East</h1><p>100 Humber Bay Park Rd W, Toronto, ON M8V 3X7<br>Common fish: Pike, bass, bluegills, punkinseed, and brown bullhead.</p>"
+        window_content:"<h1><font color=navy>Humber Bay Park East</font></h1><p>100 Humber Bay Park Rd W, Toronto, ON M8V 3X7<br>Common fish: Pike, bass, bluegills, punkinseed, and brown bullhead.</p>"
     }); 
        my_ninth_marker = new google.maps.Marker({
         position: hotspot9,
         map: my_map,
         title: "9",
-        window_content:"<h1>Marie Curtis Park</h1><p>2 Forty Second St, Etobicoke, ON M8W 3P2<br>Common fish: Salmon, trout, carp, and brown bullhead.</p>"
+        window_content:"<h1><font color=navy>Marie Curtis Park</font></h1><p>2 Forty Second St, Etobicoke, ON M8W 3P2<br>Common fish: Salmon, trout, carp, and brown bullhead.</p>"
     }); 
        my_tenth_marker = new google.maps.Marker({
         position: hotspot10,
         map: my_map,
         title: "10",
-        window_content:"<h1>Tommy Thompson Park</h1><p>1 Leslie St, Toronto, ON M4M 3M2<br>Common fish: Bass, pike, yellow perch, trout, freshwater drum, black crappie, and brown bullhead.</p>"
+        window_content:"<h1><font color=navy>Tommy Thompson Park</font></h1><p>1 Leslie St, Toronto, ON M4M 3M2<br>Common fish: Bass, pike, yellow perch, trout, freshwater drum, black crappie, and brown bullhead.</p>"
     }); 
        my_eleventh_marker = new google.maps.Marker({
         position: hotspot11,
         map: my_map,
         title: "11",
-        window_content:"<h1>Toronto Islands</h1><p>Toronto, ON M5J 2H3<br>Common fish: Bass, black crappie, bluegill, brown bullhead, punkinseed, yellow perch, and white perch.</p>"
+        window_content:"<h1><font color=navy>Toronto Islands</font></h1><p>Toronto, ON M5J 2H3<br>Common fish: Bass, black crappie, bluegill, brown bullhead, punkinseed, yellow perch, and white perch.</p>"
     }); 
  
-    // this "listener" checks for mouse clicks and opens the info window
-    // you will have to copy, rename, and lighlty modify it if you create a 
-    // second marker
+
     var my_first_listener = google.maps.event.addListener(my_first_marker, 'click', function() {
         infowindow.setContent (this.window_content);
         infowindow.open(my_map, this); 
