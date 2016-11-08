@@ -2,68 +2,54 @@
 <html>
 
   <head>
-    <title>Brief Toronto Tour</title>
+    <title>Toronto Fishing Hotspots</title>
     <meta name="description" content="a strapdown-based mapping exercise." />
-    <!-- these script tags load important javascript "libraries"
-         that our own little scripts depend on.  These are complex
-         programs way beyond our capacities to construct; but we can
-         make use of them nonetheless -->
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-
-    <!-- this line is NOT present in the jsbin version -->
     <link rel="stylesheet" href="./style.css" type="text/css" media="screen" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   </head>
 
-  <!-- note the 'onload' attribute here.
-       it calls the function "initialize"
-       when the body has finished loading.  That's because the
-       Javascript in the JS pane will not run properly unless it
-       waits for the elements inside the bode to load.  Therefore
-       we don't run the most important parts of the code until the page has finished loading.
-    -->
   <body onload="initialize();">
-    <textarea theme="united" style="display:none;">
+    <textarea theme="Cyborg" style="display:none;">
+      
+## Introduction 
+    
+From cod to pike to trout, Toronto is a city with many different kinds fish. It is a city brimming with with aquatic habitats such as beaches, reefs, bays, marshes, and ponds, and throughout history, fishing hotspots have been found by local anglers. This page will not only provide a map of such fishing hotspots, but also guide you through a brief history of how the aquatic habitats of the land changed, highlight the importance of clean water, and provide a list of clean water initiatives that allow the existence of fishable water in the first place. 
+ 
+### Brief Habitat History
+With beaches, reefs, bays, marshes, and ponds, Toronto is historically filled with aquatic habitats. According to Statistics Canada, the Toronto waterfront is approximately 76.5 metres above sea level, with a shoreline that stretches 140 kilometres when you include the bays and islands.<sup>[1](http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=1d66f937de453410VgnVCM10000071d60f89RCRD&vgnextchannel=57a12cc817453410VgnVCM10000071d60f89RCRD)</sup> In addition, 307 kilometres of rivers and creeks running throughout the city, along with them flowing into Lake Ontario, create great fishing opportunities.<sup>[2](http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=1d66f937de453410VgnVCM10000071d60f89RCRD&vgnextchannel=57a12cc817453410VgnVCM10000071d60f89RCRD)</sup> Did you know that “Toronto” was derived from the Huron word “fishing weir”?
 
-# This Map will eventually Become some kind of tour of Toronto.
+However, although fishing is a popular recreational sport, it is important to keep in mind how much the aforementioned aquatic habitats have changed over time. In the early 1600s, European settlement at the Toronto watersheds changed the physical conditions of the creeks and rivers, which affected the habitats of fish.<sup>[3](https://www1.toronto.ca/City%20Of%20Toronto/Toronto%20Water/Files/pdf/F/Fishes%20of%20TO_PRINT_Feb23[1].pdf)</sup> The clearing of forests led to water and sediment runoff, while the discharge of sawmills the built along stream banks contributed to water pollution and the burying of fish at their spawning locations. The mills also increased water temperatures, which altered water flow patterns, creating barriers for fish that moved upstream.<sup>[4](https://www1.toronto.ca/City%20Of%20Toronto/Toronto%20Water/Files/pdf/F/Fishes%20of%20TO_PRINT_Feb23[1].pdf)</sup> Stonehooking, used from the 1850s to early 1900s, is a process by which one removes gravel and rocks from lake bottoms for the sake of construction, also altered the shoreline and increased erosion.<sup>[5](https://books.google.ca/books?id=ev_DOCrQAHsC&pg=PA67)</sup>  Weed removal, hardening, and filling up small streams were other contributors to shoreline changes. Meanwhile, the industrial period from 1900 to 1960 altered the lakefronts. Ashbridge’s March, for example, was drained away and filled via stonehooking to create the land around what’s known as Cherry Street and Commissioners Street today. Other sites that had their lakes filled included portions of the central waterfront, the Toronto Islands, the Leslie Street Spit, Ontario Place, and Woodbine Beach.<sup>[6](https://www1.toronto.ca/City%20Of%20Toronto/Toronto%20Water/Files/pdf/F/Fishes%20of%20TO_PRINT_Feb23[1].pdf)</sup> 
 
-Your first task will be to locate some real places.  You can get the precise locations at various services, e.g [latlong.net](http://www.latlong.net/].
+It was in 1972 that the Canada/USA Great Lakes Water Quality Agreement came into place, and in 1987 that Toronto and its regions became an Area of Concern, as defined by the International Joint Commission.<sup>[7](https://www.ec.gc.ca/grandslacs-greatlakes/default.asp?lang=En&n=45B79BF9-1)</sup> By the early 2000s, restoration of water and their habitats began with initiatives such as the Wet Weather Flow Master Plan, however in 2005, a massive storm caused heavy damage to many urban streams.<sup>[8](http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=972bab501d8ce310VgnVCM10000071d60f89RCRD)</sup> The reintroduction of Atlantic Salmon followed shortly afterwards with the restoration of Lake Ontario and its streams such as the Humber River.<sup>[9](https://www1.toronto.ca/City%20Of%20Toronto/Toronto%20Water/Files/pdf/F/Fishes%20of%20TO_PRINT_Feb23[1].pdf)</sup>  
+      
+### The Importance of Clean Water
+Clean water, in the words of Lake Ontario Waterkeeper, means swimmable, drinkable, and, of course, fishable water.<sup>[10](http://www.waterkeeper.ca/lake-ontario/)</sup> From the The Clean Water Act of 2006, which has the goal of decreasing contaminants and allowing Ontario citizens access to safe drinking water, to the Recreational Water Protocol that ensures safe swimming via beach, pool, and spa inspections, to the Fisheries Act that requires projects to not severely harm fish and their habitats, the prevalence of clean water in everyday life is clear.<sup>[11](https://www.ontario.ca/laws/statute/06c22)</sup><sup>,</sup><sup>[12](http://www.toronto.ca/health/swimsafe/)</sup><sup>,</sup><sup>[13](http://laws-lois.justice.gc.ca/eng/acts/F-14/)</sup> To disregard clean water would also mean to contribute to habitat degradation and/or loss - that is fisheries are threatened by stressors such as, the infilling of creeks, lakes, and streams, and the alteration of land for the sake of logging and clearing aquatic vegetation. Significant flow alterations such as water diversions and water extraction may also occur as well, which would change habitats and cause the death of fish. By not paying attention to aquatic invasive species that may appear due to bad water conditions, fish and their habitats would be threatened as well, for they would be subjected to competition and predation. Furthermore, pollution would negatively affect the health of fish.<sup>[14](http://www.dfo-mpo.gc.ca/pnw-ppe/fpp-ppp/threats-menaces-eng.html)</sup>
 
-Then add those places to the marker array in [script.js](./script.js) (see instructions there).
+### Clean Water Initiatives
+Below are Ontario water-acts that aid in more swimmable, drinkable, and fishable water:
 
-replace this text and the text with your essay. But be sure not to eliminate the html elements that
-are contained inside this textarea, or your map won't work at all!
+* [Fisheries Act](http://laws-lois.justice.gc.ca/eng/acts/f-14/)
+* [Endangered Species Act](https://www.ontario.ca/laws/statute/07e06)
+* [Water Resources Act](https://www.ontario.ca/laws/statute/90o40)
+* [Lakes and Rivers Improvement Act](https://www.ontario.ca/laws/statute/90l03)
+* [Nutrient Management Act](https://www.ontario.ca/laws/statute/02n04)
+* [Safe Drinking Water Act](https://www.ontario.ca/laws/statute/02s32)
+* [Sustainable Water and Sewage Systems Act](https://www.ontario.ca/laws/statute/s02029)
+* [Environmental Assessment Act](https://www.ontario.ca/laws/statute/90e18)
 
-It makes sense to put an introductory paragraph here, above the map and buttons. To change the bootswatch thenme, change "united" to one of the other theme names listed at [strapdownjs.com](http://strapdownjs.com/).
-
-<div class="">
-  <!-- these buttons hide/show all the markers  -->
-  <!-- to hide/show blue or red markers instead, change my_markers below to blue_markers
-       to red_markers.  If you have defined your own color (or other) arrays, use those instead -->
-  <button onclick="hideMarkers(my_markers)" class="rounded" id="hide">hide markers</button>
-  <button onclick="showMarkers(my_markers, my_map)" id="show"> show markers</button>
-  <p></p>
-  <div id="mapcontainer">
-    <div id="map_canvas"></div>
-  </div>
-  <div id="map_legend"></div>
-</div>
-
-# Next Section
-
-The rest of your essay should go under the map, probably.
-
-## in sections like this
-also _italics_ and __bold__ which can also be written *like this* or **like this**
-etc. Be sure to [make use of links](http://digital.hackinghistory.ca) -- that's one of the reasons we write on the Web, and I've asked you to use links for all yor footnotes/references as well.  
+### Toronto Fishing Hotspots    
     </textarea>
 
+    <div class="container">
+      <p></p>
+      <div id="mapcontainer">
+        <div id="map_canvas"></div>
+      </div>
+    </div>
 
-
-    <!-- this is the magic that makes markdown and Twitter Bootstrap styles work for us -->
     <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
 
-    <!-- this line is NOT present in the jsbin version, and calls your custom js -->
     <script src="./script.js"></script>
 
   </body>
