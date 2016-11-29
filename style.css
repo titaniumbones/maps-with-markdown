@@ -1,74 +1,43 @@
-/* This is a very simple CSS setup that shows the size of the relevant divs and -- important! -- sets the size of the map container */
 
-/* add any styling for the central column here */
 div.container {
 }
 
 div#mapcontainer {
-  font-family:Arial, sans-serif;
-  font-size:11px;
+  font-family: sans-serif;
+  font-size:12px;
   border:6px double #5E5C63;
 }
 
-/* you can change the size of the map here if you want
-   you can even use percentages instead of pixels.
-   We let the width be set by the containing element,
-   but constrain the height
-*/
 div#map_canvas {
-  height:450px;
-}
-
-/* this is the legend div. Can you make it into a right sidebar? you may
-have to add some extra css to the mapcontainer div */
-div#map_legend {
+  height:350px;
 
 }
 
-/* if you want, you can make the text in the legend less ugly by adding
-extra css classes */
-div#map_legend h1, div#map_legend h3 {
-
+button.glow-button:hover {
+ color: #C9EFF2;
+ box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
 }
 
-// make it obvious that the legend text is clickable
-div.pointer {
-    cursor:pointer
+button#glow-button {
+  background:#87aeb2
+;
+   border: 2px solid;
+   border-radius: 12px 25px 11px;
+  
 }
-
-/*just for fun, we can style the buttons using classes
-  button.rounded means "all buttons with the class of
-  rounded".  button#hide meands "the button with the
-  id of hide"
-*/
-button.rounded {
-  -webkit-border-radius:5px;
-  -moz-border-radius:5px;
-  border-radius:5px;
-  border: 1px black solid;
+button#glow-button2 {
+  background:#658D91;
+   border: 2px solid;
+   border-radius: 12px 25px 11px;
+    
 }
-button#hide {
-  background:orange;
-}
-button#show {
-  background:green;
-}
-
-/* use these last three to style the text inside the
-   infowindows.  They are pretty ugly at the moment,
-   consider making them prettier.
-
-*/
 
 div#map_canvas h1 {
-
-}
-
-div.address  {
-
-}
-
-div.description {
-
+font-family: Times, sans-serif;
+color: #658D91;
+font-size:25px;
+  border: 2px solid;
+  border-radius: 12px;
+  padding: 1px;
 }
 
