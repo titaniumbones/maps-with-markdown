@@ -2,68 +2,43 @@
 <html>
 
   <head>
-    <title>Brief Toronto Tour</title>
-    <meta name="description" content="a strapdown-based mapping exercise." />
-    <!-- these script tags load important javascript "libraries"
-         that our own little scripts depend on.  These are complex
-         programs way beyond our capacities to construct; but we can
-         make use of them nonetheless -->
+    <title>History of Sailing in Toronto</title>
+    <meta name="description" content="" />
+    
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-
-    <!-- this line is NOT present in the jsbin version -->
     <link rel="stylesheet" href="./style.css" type="text/css" media="screen" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   </head>
-
-  <!-- note the 'onload' attribute here.
-       it calls the function "initialize"
-       when the body has finished loading.  That's because the
-       Javascript in the JS pane will not run properly unless it
-       waits for the elements inside the bode to load.  Therefore
-       we don't run the most important parts of the code until the page has finished loading.
-    -->
   <body onload="initialize();">
-    <textarea theme="united" style="display:none;">
+    <textarea theme="cyborg" style="display:none;">
 
-# This Map will eventually Become some kind of tour of Toronto.
+# **The Evolution of Toronto and its Sailing Clubs over Time**
+  One may not consider this, but the audience, location and uses for local Toronto sailing clubs reveal a great deal about the change of Toronto as a whole. By covering some of the history of a few clubs based in Lake Ontario we can pinpoint certain changes in Toronto. The following clubs will be examined: The Royal Canadian Yacht Club (RCYC), The National Yacht Club (NYC), as well as Alexandra Yacht Club (AYC) with their respective locations on the map below. It is well known that Toronto’s shoreline was not always as far-reaching as it is today, with its original shore being just south of where Front Street is today. Just as the shoreline changed, so too did the community which inhabited it. These subtle changes can be seen just from looking at the brief history of each of the sailing clubs! 
 
-Your first task will be to locate some real places.  You can get the precise locations at various services, e.g [latlong.net](http://www.latlong.net/].
+Initially known as the Toronto Boat Club, the oldest and most prestigious sailing club, RCYC, was [ordered by Queen Victoria in 1854]( http://www.thenyc.com/about-the-nyc/the-nyc-present-and-past/) to serve as an auxiliary for the British Royal Navy in defense of Lake Ontario, becoming what it is known today. In 1881 the RCYC was also forced to move to the Toronto Island to make room for the ever-growing and industrializing harbourfront. From these two tidbits we can gain a better understanding about Toronto at the time of RCYC’s inception: there was a deep connection between Toronto (or Canada as a whole) and the metropol, where Toronto would act on behalf of the Royal Navy.
 
-Then add those places to the marker array in [script.js](./script.js) (see instructions there).
+The NYC and AYC, both founded slightly later have a shared history which also highlights similar changes faced by RCYC. Neither of them have a military history or ties to the monarchy, but were strictly recreational clubs that featured sailing and boating in general as the core of their community. 
+In the case of Alexandra, they went from Ward’s island inland to the Aquatic Clubs reservation, by Bathurst st. in 1919. The NYC was founded on the west side of the Queens Quay Wharf by contrast, but moved close the Aquatic Clubs reservation ten years prior to Alexandra, becoming sisters from 1919 onwards. The clubs ran into problems because their location was suboptimal for boating (not deep enough for some vessels) as well as The Depression followed by the Second World War [leading to a sharp decline in membership](http://www.ayc.ca/Home/history.html). This highlights the fact that recreational activity and community entertainment dwindled in times of heightened stress as well as the fact that the shore, if it aims to include water sport clubs, must have appropriate docks. By 1950 the federal government had decided to construct steel walls in the area to protect the basin, Toronto saw itself in a time of revitalization with pavement laid and actual street signs, such as 24 Stadium Road. Leading to where both clubs are in present day, the [Toronto Harbour Commission proposed a new site for the clubs in 1983](http://www.thenyc.com/about-the-nyc/the-nyc-present-and-past/), and the new strip of land was completed and put to use in 1988. From that point onwards both Alexandra and NYC have called it home. 
 
-replace this text and the text with your essay. But be sure not to eliminate the html elements that
-are contained inside this textarea, or your map won't work at all!
 
-It makes sense to put an introductory paragraph here, above the map and buttons. To change the bootswatch thenme, change "united" to one of the other theme names listed at [strapdownjs.com](http://strapdownjs.com/).
 
-<div class="">
-  <!-- these buttons hide/show all the markers  -->
-  <!-- to hide/show blue or red markers instead, change my_markers below to blue_markers
-       to red_markers.  If you have defined your own color (or other) arrays, use those instead -->
-  <button onclick="hideMarkers(my_markers)" class="rounded" id="hide">hide markers</button>
-  <button onclick="showMarkers(my_markers, my_map)" id="show"> show markers</button>
-  <p></p>
-  <div id="mapcontainer">
-    <div id="map_canvas"></div>
-  </div>
-  <div id="map_legend"></div>
-</div>
 
-# Next Section
 
-The rest of your essay should go under the map, probably.
-
-## in sections like this
-also _italics_ and __bold__ which can also be written *like this* or **like this**
-etc. Be sure to [make use of links](http://digital.hackinghistory.ca) -- that's one of the reasons we write on the Web, and I've asked you to use links for all yor footnotes/references as well.  
+      
     </textarea>
+    <div id="map"></div>
+    
+    <div class="container">
+      <button onclick="hideMarkers(my_markers)" class="button glow-button" id="glow-button">Hide Markers</button>
+      <button onclick="showMarkers(my_markers, my_map)" class=" button glow-button" id="glow-button2"> Show Markers</button>
+      <p></p>
+      <div id="mapcontainer">
+        <div id="map_canvas"></div>
+      </div>
+    </div>
 
-
-
-    <!-- this is the magic that makes markdown and Twitter Bootstrap styles work for us -->
     <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
 
-    <!-- this line is NOT present in the jsbin version, and calls your custom js -->
     <script src="./script.js"></script>
 
   </body>

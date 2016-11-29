@@ -1,26 +1,18 @@
-// initialize the variables we need
-// we do this here to make sure we can access them
-// whenever we need to -- they have 'global scope'
+
 var my_map; // this will hold the map
 var my_map_options; // this will hold the options we'll use to create the map
-var my_center = new google.maps.LatLng(41.9000,12.5000); // center of map
+var my_center = new google.maps.LatLng(43.6344998,-79.3805541); // center of map
 var my_markers = []; // we use this in the main loop below to hold the markers
-// this one is strange.  In google maps, there is usually only one
-// infowindow -- its content and position change when you click on a
-// marker
 var infowindow = new google.maps.InfoWindow({content: ""});
 var legendHTML = "";
 
-// I'm complicating things a bit with this next set of variables, which will help us
-// with marker colors
+
 var blueURL = "http://maps.google.com/mapfiles/ms/icons/blue-dot.png";
 var redURL = "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
 var red_markers = [];
 var blue_markers = [];
 
 
-/* a function that will run when the page loads.  It creates the map
- and the initial marker.  If you want to create more markers, do it here. */
 function initialize() {
     my_map_options = {
         center:  my_center, // to change this value, change my_center above
@@ -28,30 +20,45 @@ function initialize() {
         mapTypeId: google.maps.MapTypeId.HYBRID // you can also use TERRAIN, STREETMAP, SATELLITE
     };
 
-    // this one line creates the actual map
     my_map = new google.maps.Map(document.getElementById("map_canvas"),
                                  my_map_options);
-    // this is an *array* that holds all the marker info
     var all_my_markers =
-            [{position: new google.maps.LatLng(41.9000,12.5000),
+            [{position: new google.maps.LatLng(43.6254364,-79.3693453),
               map: my_map,
-              icon: blueURL, // this sets the image that represents the marker in the map to the one
-                             // located at the URL which is given by the variable blueURL, see above
+              icon: blueURL,
               title: "first Marker",
-              window_content: "<h1>Marker1</h1><p> and this would be the extended description</p>"
+              window_content: "<h1>Royal Canadian Yacht Club</h1><p>Founded in 1852, with deep colonial ties and prestige.</p>"
              },
-             {position: new google.maps.LatLng(41.8902,12.4923),
+             {position: new google.maps.LatLng(43.633325,-79.4003356),
               map: my_map,
-              icon: blueURL, // this sets the image that represents the marker in the map
+              icon: blueURL, 
               title: "second Marker",
-              window_content: "<h1>Marker2</h1><p> and this would be the extended description</p>"
+              window_content: "<h1>National Yacht Club</h1><p>Founded in 1894 at the Queens Quay Wharf.</p>"
             },
-            {position: new google.maps.LatLng(41.8986,12.4768),
+            {position: new google.maps.LatLng(43.6353243,-79.4010072),
              map: my_map,
-             icon: redURL, // this sets the image that represents the marker in the map
+             icon: redURL,
              title: "third Marker",
-             window_content: "<h1>Marker3</h1><p> and this would be the extended description</p>"
-           }
+             window_content: "<h1>Queens Quay Wharf</h1><p>AKA Aquatics Club Reservation. Location of NYC in 1904 and AYC in 1919.</p>"
+           },
+             {position: new google.maps.LatLng(43.6329744,-79.4005928),
+              map: my_map,
+              icon: redURL,
+              title: "fourth Marker",
+              window_content: "<h1>Alexandia Yacht Club</h1><p>Founded in 1906.</p>"
+             },
+             {position: new google.maps.LatLng(43.639026,-79.348815),
+             map: my_map,
+             icon: blueURL,
+             title: "fifth Marker",
+              window_content:"<h1>Original Location of AYC</h1><p>Previously known as Fisherman's Island, now a park of Cherry Beach."
+           },
+            {position: new google.maps.LatLng(43.6439459,-79.3909462),
+             map: my_map,
+             icon: redURL,
+             title: "sixth Marker",
+              window_content:"<h1>Original Shoreline of Toronto</h1><p>Past this point is man-made shore."
+             }
             ];
 
     for (j = 0; j < all_my_markers.length; j++) {
@@ -85,24 +92,19 @@ function initialize() {
    
 }
 
-// this hides all markers in the array
-// passed to it, by attaching them to
-// an empty object (instead of a real map)
+
 function hideMarkers (marker_array) {
     for (var j in marker_array) {
         marker_array[j].marker.setMap(null);
     }
 }
-// by contrast, this attaches all the markers to
-// a real map object, so they reappear
+
 function showMarkers (marker_array, map) {
     for (var j in marker_array) {
         marker_array[j].marker.setMap(map);
     }
 }
 
-// I added this for fun.  It allows you to trigger the infowindow
-// form outside the map.  
 function locateMarker (marker) {
     console.log(marker);
     my_map.panTo(marker.marker.position);
