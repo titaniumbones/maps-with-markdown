@@ -3,7 +3,7 @@
 // whenever we need to -- they have 'global scope'
 var my_map; // this will hold the map
 var my_map_options; // this will hold the options we'll use to create the map
-var my_center = new google.maps.LatLng(41.9000,12.5000); // center of map
+var my_center = new google.maps.LatLng(43.639028,-79.403333); // center of map
 var my_markers = []; // we use this in the main loop below to hold the markers
 // this one is strange.  In google maps, there is usually only one
 // infowindow -- its content and position change when you click on a
@@ -24,7 +24,7 @@ var blue_markers = [];
 function initialize() {
     my_map_options = {
         center:  my_center, // to change this value, change my_center above
-        zoom: 13,  // higher is closer-up
+        zoom: 19,  // higher is closer-up
         mapTypeId: google.maps.MapTypeId.HYBRID // you can also use TERRAIN, STREETMAP, SATELLITE
     };
 
@@ -33,24 +33,30 @@ function initialize() {
                                  my_map_options);
     // this is an *array* that holds all the marker info
     var all_my_markers =
-            [{position: new google.maps.LatLng(41.9000,12.5000),
+            [{position: new google.maps.LatLng(43.639028,-79.403333),
               map: my_map,
-              icon: blueURL, // this sets the image that represents the marker in the map to the one
+              icon: redURL, // this sets the image that represents the marker in the map to the one
                              // located at the URL which is given by the variable blueURL, see above
-              title: "first Marker",
-              window_content: "<h1>Marker1</h1><p> and this would be the extended description</p>"
+              title: "Fort York",
+              window_content: "<h1>Fort York</h1><p>The fort was built in the late 18th century and early 19th century. Fort York was built to take control of Lake Ontario. It was Lieutenant Governor John Graves Simcoe who ordered the Bristish and Canadian military to build the fort against the United States.</p>"
              },
-             {position: new google.maps.LatLng(41.8902,12.4923),
+             {position: new google.maps.LatLng(43.6393,-79.40215),
               map: my_map,
               icon: blueURL, // this sets the image that represents the marker in the map
-              title: "second Marker",
-              window_content: "<h1>Marker2</h1><p> and this would be the extended description</p>"
+              title: "Brick Powder Magazine",
+              window_content: "<h1>Brick Powder Magazine</h1><p>The powder magazine was the building holding the entire fort's gun powder. The building was the only building made out either brick or stone. The were built sturdy so that a bullet can't go through the walls and ignite the gun powder. They are also built below ground level so that the enemey can't spot the building.</p>"
             },
-            {position: new google.maps.LatLng(41.8986,12.4768),
+            {position: new google.maps.LatLng(43.6389,-79.4043),
              map: my_map,
-             icon: redURL, // this sets the image that represents the marker in the map
-             title: "third Marker",
-             window_content: "<h1>Marker3</h1><p> and this would be the extended description</p>"
+             icon: blueURL, // this sets the image that represents the marker in the map
+             title: "Barrack",
+             window_content: "<h1>Barrack</h1><p>The barrack is the building where all the men would sleep. Inside the building, is a row of bunk beds. If the men had a family, their family would have a spot in the barrack. A British soilder were allowed to bring his wife and one child to Canada.</p>"
+           },
+            {position: new google.maps.LatLng(43.63909,-79.40286),
+             map: my_map,
+             icon: blueURL, // this sets the image that represents the marker in the map
+             title: "Blockhouse",
+             window_content: "<h1>Blockhouse 1</h1><p>The blockhouse had no weapons. It was a building for defense. There would be holes in all directions allowing soliders to shoot their musket at the enemy. The second level would have holes on the floor of the parameter of the building allowing the soliders to shoot their muskets down at the enemy.</p>"
            }
             ];
 

@@ -2,11 +2,14 @@
 
 /* add any styling for the central column here */
 div.container {
+    background-color: black;
+    color: white;
 }
 
 div#mapcontainer {
-  font-family:Arial, sans-serif;
-  font-size:11px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size:15px;
+    color: white;
   border:6px double #5E5C63;
 }
 
@@ -16,19 +19,20 @@ div#mapcontainer {
    but constrain the height
 */
 div#map_canvas {
-  height:450px;
+  height:600px;
 }
 
 /* this is the legend div. Can you make it into a right sidebar? you may
 have to add some extra css to the mapcontainer div */
 div#map_legend {
-
+    font-family: 'Montserrat', Arial, sans-serif;
+    color:white;
 }
 
 /* if you want, you can make the text in the legend less ugly by adding
 extra css classes */
 div#map_legend h1, div#map_legend h3 {
-
+    
 }
 
 // make it obvious that the legend text is clickable
@@ -48,10 +52,10 @@ button.rounded {
   border: 1px black solid;
 }
 button#hide {
-  background:orange;
+  background:skyblue;
 }
 button#show {
-  background:green;
+  background:lightblue;
 }
 
 /* use these last three to style the text inside the
@@ -61,7 +65,7 @@ button#show {
 */
 
 div#map_canvas h1 {
-
+    font-size: 15px;
 }
 
 div.address  {
