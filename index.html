@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>Title Here | by Your Name</title>
+    <title>Amazonian Seattle | by Jenny Seo</title>
     <meta name="description" content="a markdown-based mapping exercise." />
     <!-- these script tags load important javascript "libraries"
          that our own little scripts depend on.  These are complex
@@ -16,7 +16,7 @@
     <!-- Our Bootstrap theme. To use another copy the appropriate URL from  -->
     <!-- https://www.bootstrapcdn.com/bootswatch/?theme=0 -->
     <link rel="stylesheet" type="text/css" media="all"
-          href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/solar/bootstrap.min.css" />
+          href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/slate/bootstrap.min.css" />
 
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyCVtRhi_zYbrx6XcR6c5Wu_VKmXWvnYz5E"></script>
 
@@ -47,7 +47,7 @@
     <script src="./script.js"></script>
       <script>
         // we define the main actions of the script as a function which wil lbe run when the
-        // page resources have been completely loaded. 
+        // page resources have been completely loaded.
         var initializePage = function() {
           // instantiate the parser object and declare the
           // placeholder variable for the rendered content
@@ -57,7 +57,7 @@
               linkify: true}),
               renderedcontent = "",
               origContent = $("#contentdiv").html();
-          
+
           md.block.ruler.enable([
             'footnote',
             'deflist'
